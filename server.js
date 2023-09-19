@@ -18,8 +18,17 @@ db.conn_sequelize.sync({ force: true }).then(() => {
   console.log('Drop and re-sync db.');
 });
 
+const MainRoutes = require('./routes/main.routes');
+app.use('/api/main',MainRoutes);
 
+// const stockUpdateRoutes = require('./routes/stockUpdate.routes');
+// app.use('supp_stock/update_stock', stockUpdateRoutes);
 
+// const LeadtimeRoutes = require('./routes/Leadtime.routes');
+// app.use('/supp_stock/update_leadtime', LeadtimeRoutes);
+
+// const BarcodeSubscribeRoutes = require('./routes/BarcodeSubscribe.routes');
+// app.use('/supp_stock/list_barcode', BarcodeSubscribeRoutes);
 
 const PORT = process.env.PORT || 1433;
 app.listen(PORT, () => {

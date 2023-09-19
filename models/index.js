@@ -34,4 +34,28 @@ db.tutorials = require('./tutorial.model.js')(
   BaseModel
 );
 
+// db.stockUpdate = require('./stockUpdate.model.js')(
+//   conn_sequelize,
+//   Sequelize,
+//   BaseModel
+// );
+
+// db.leadtime = require('./Leadtime.model.js')(
+//   conn_sequelize,
+//   Sequelize,
+//   BaseModel
+// );
+
+// db.barcodeSubscribe = require('./barcode_subscribe.model.js')(
+//   conn_sequelize,
+//   Sequelize,
+//   BaseModel
+// );
+
+db.sts_table = require('./main.model.js')(
+  conn_sequelize,
+  Sequelize,
+  BaseModel
+);
+
 module.exports = db;
